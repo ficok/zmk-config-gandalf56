@@ -35,6 +35,7 @@
                        &trans &kp ESC  &mo NAV   &kp BSPC  &kp ENTER &mo ITP  &kp UP    &trans
                        &trans &kp LGUI &kp LCTRL &kp LSHFT &kp SPACE &kp LALT &kp DOWN  &kp RIGHT
            >;
+        };
 
         interp_layer {
             bindings = <
@@ -45,6 +46,7 @@
                           &trans    &trans    &trans    &kp DEL   &trans    &trans   &trans     &trans
                           &trans    &trans    &trans    &trans    &trans    &trans   &trans     &trans
            >;
+        };
 
         nav_layer {
             bindings = <
@@ -55,8 +57,7 @@
                        &trans &trans &kp TAB &kp DEL   &trans    &trans   &trans   &trans
                        &trans &trans &trans  &trans    &trans    &trans   &trans   &trans
            >;
-
-        //    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+        //    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 };
