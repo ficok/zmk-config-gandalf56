@@ -1,0 +1,8 @@
+file_format: "1"
+id: gandalf56
+name: gandalf56
+type: shield
+url: https://github.com/ficok/gandalf56
+requires: [pro_micro]
+features:
+  - keys
