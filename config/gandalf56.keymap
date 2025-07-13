@@ -10,9 +10,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "shortcut_macros.dtsi"
+#include "nav_macros.dtsi"
 
-#define ITP 1
-#define NAV 2
+#define ITP  1
+#define LNAV 2
+#define RNAV 3
+#define NUM  4
 
 // Uncomment the following lines if using the "Direct Wire" jumper to switch the matrix to a direct wire.
 
@@ -28,34 +32,56 @@
 
         default_layer {
             bindings = <
-                &kp N1 &kp N2 &kp N3   &kp N4    &kp N5    &kp N6    &kp N7   &kp N8    &kp N9  &kp N0
-                &kp Q  &kp W  &kp E    &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O   &kp P
-                &kp A  &kp S  &kp D    &kp F     &kp G     &kp H     &kp J    &kp K     &kp L   &kp SEMI
-                &kp Z  &kp X  &kp C    &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH
-                       &trans &kp ESC  &mo NAV   &kp BSPC  &kp ENTER &mo ITP  &kp UP    &trans
-                       &trans &kp LGUI &kp LCTRL &kp LSHFT &kp SPACE &kp LALT &kp DOWN  &kp RIGHT
+                &none  &cut   &copy     &paste     &none       &none     &undo      &redo     &save   &none
+                &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y     &kp U      &kp I     &kp O   &kp P
+                &kp A  &kp S  &kp D     &lt RNAV F &kp G       &kp H     &lt LNAV J &kp K     &kp L   &kp SEMI
+                &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N     &kp M      &kp COMMA &kp DOT &kp DQT
+                       &none  &kp LCTRL &kp ITP    &none       &none     &kp ENTER  &mo NUM   &none
+                       &none  &none     &none      &kp LSHFT   &kp SPACE &none      &none     &none
            >;
         };
 
         interp_layer {
             bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7   &kp F8     &kp F9    &kp F10
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS &kp ASTRK  &kp LPAR  &kp RPAR
-                &kp EQUAL &kp PLUS  &kp MINUS &kp UNDER &kp TILDE &kp FSLH  &kp PIPE &kp BSLH   &kp LBKT  &kp RBKT
-                &kp TAB   &trans    &trans    &trans    &kp F11   &kp F12   &kp SQT  &kp GRAVE  &kp LBRC  &kp RBRC 
-                          &trans    &trans    &trans    &kp DEL   &trans    &trans   &trans     &trans
-                          &trans    &trans    &trans    &trans    &trans    &trans   &trans     &trans
+                &none     &trans    &trans    &trans    &none       &none     &trans    &trans   &trans   &none
+                &kp TAB   &kp LBKT  &kp LPAR  &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp LBKT &kp LPAR &kp BSPC
+                &kp EQUAL &none     &kp LBRC  &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
+                &kp ESC   &none    &kp HASH  &kp EXCL   &kp TILDA   &kp CARET &kp QMARK &kp BSLH &kp PIPE &kp SQT
+                          &none    &trans    &trans      &none      &none     &trans    &kp LALT &none
+                          &none    &none     &none       &trans     &trans    &none     &none    &none
+           >;
+        };
+        
+        left_nav_layer {
+            bindings = <
+                &none &trans  &trans    &trans   &none     &none  &trans &trans &trans &none
+                &none &l_sel_l &w_sel_l &w_sel_r &l_sel_r  &none  &none  &none  &none  &none
+                &none &l_mov_l &w_mov_l &w_mov_r &l_mov_r  &none  &none  &none  &none  &none
+                &none &l_del_l &w_del_l &w_del_r &l_del_r  &none  &none  &none  &none  &none
+                      &none    &trans   &trans   &none     &none  &trans &trans &none
+                      &none    &none    &none    &trans    &trans &none  &none  &none
+           >;
+        };
+        
+        right_nav_layer {
+            bindings = <
+                &none &trans &trans &trans &none    &none     &trans   &trans   &trans &none
+                &none &none  &none  &none  &none    &none     &none    &none    &none  &none
+                &none &none  &none  &none  &none    &kp PG_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &none &none  &none  &none  &none    &kp PG_DN &none    &none    &none  &none
+                      &none  &trans &trans &none    &none     &trans   &trans   &none
+                      &none  &none  &none  &trans   &trans    &none    &none    &none
            >;
         };
 
-        nav_layer {
+        number_layer {
             bindings = <
-                &trans &trans &trans &trans  &trans    &trans    &trans   &trans   &trans &trans
-                &trans &trans &trans &trans  &trans    &trans    &trans   &trans   &trans &trans
-                &trans &trans &trans &trans  &trans    &kp PG_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &trans &trans &trans &trans  &trans    &kp PG_DN &trans   &trans   &trans &trans
-                       &trans &trans &kp TAB &kp DEL   &trans    &trans   &trans   &trans
-                       &trans &trans &trans  &trans    &trans    &trans   &trans   &trans
+                &none  &trans &trans &trans  &none     &none  &trans  &trans &trans &none
+                &kp F1 &kp F2 &kp F3 &kp F4  &kp F5    &kp F6 &kp F7  &kp F8 &kp F9 &kp F10
+                &kp N1 &kp N2 &kp N3 &kp N4  &kp N5    &kp N6 &kp N7  &kp N8 &kp N9 &kp N0
+                &none  &none  &none  &kp F11 &none     &none  &kp F12 &none  &none  &none
+                       &none  &trans &trans  &none     &none  &trans  &trans &none
+                       &none  &none  &none   &trans    &trans &none   &none  &none
            >;
         };
         //    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
