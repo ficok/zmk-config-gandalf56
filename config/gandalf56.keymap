@@ -48,7 +48,7 @@
                 &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RBKT &kp RPAR &kp BSPC
                 &kp EQUAL &none     &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
                 &kp ESC   &none    &kp HASH  &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp BSLH &kp PIPE &kp SQT
-                          &none    &trans    &trans    &none       &none     &trans    &kp LALT &none
+                          &none    &trans    &trans    &none       &none     &kp DEL    &kp LALT &none
                           &none    &none     &none     &trans      &trans    &none     &none    &none
            >;
         };
@@ -67,7 +67,7 @@
         right_nav_layer {
             bindings = <
                 &none &trans &trans &trans &none    &none     &trans   &trans   &trans &none
-                &none &none  &none  &none  &none    &none     &none    &none    &none  &none
+                &none &none  &none  &none  &none    &none     &none    &none    &none  &kp BSPC
                 &none &none  &none  &none  &none    &kp PG_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT
                 &none &none  &none  &none  &none    &kp PG_DN &none    &none    &none  &none
                       &none  &trans &trans &none    &none     &trans   &trans   &none
