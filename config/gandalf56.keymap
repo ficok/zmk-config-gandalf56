@@ -47,7 +47,7 @@
                 &none     &trans    &trans   &trans    &none       &none     &trans    &trans   &trans   &none
                 &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RBKT &kp RPAR &kp BSPC
                 &kp EQUAL &none     &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
-                &kp ESC   &none    &kp HASH  &kp EXCL  &kp TILDA   &kp CARET &kp QMARK &kp BSLH &kp PIPE &kp SQT
+                &kp ESC   &none    &kp HASH  &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp BSLH &kp PIPE &kp SQT
                           &none    &trans    &trans    &none       &none     &trans    &kp LALT &none
                           &none    &none     &none     &trans      &trans    &none     &none    &none
            >;
