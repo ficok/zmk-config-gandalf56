@@ -29,8 +29,8 @@
                 &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y     &kp U      &kp I     &kp O   &kp P
                 &kp A  &kp S  &kp D     &lt RNAV F &kp G       &kp H     &lt LNAV J &kp K     &kp L   &kp SEMI
                 &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N     &kp M      &kp COMMA &kp DOT &kp DQT
-                       &none  &kp LCTRL &mo ITP    &none       &none     &kp ENTER  &mo NUM   &none
-                       &none  &none     &none      &kp LSHFT   &kp SPACE &none      &none     &none
+                       &none  &kp LCTRL &kp ENTER  &kp LSHFT   &kp SPACE &mo ITP    &mo NUM   &none
+                       &none  &none     &none      &none       &none      &none     &none
            >;
         };
 
@@ -40,8 +40,8 @@
                 &kp TAB   &kp LBKT &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
                 &kp EQUAL &none    &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
                 &kp ESC   &kp LT   &kp HASH  &kp EXCL &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
-                          &none    &trans    &trans    &none       &none     &kp DEL    &kp LALT &none
-                          &none    &none     &none     &trans      &trans    &none      &none    &none
+                          &none    &trans    &kp DEL  &kp LALT    &trans    &trans    &trans   &none
+                          &none    &none     &none     &trans     &trans    &none      &none    &none
            >;
         };
         
@@ -51,30 +51,30 @@
                 &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none   &none  &none  &none  &none  &none
                 &l_mov_l &w_mov_l &w_mov_r &l_mov_r &none   &none  &none  &none  &none  &none
                 &l_del_l &w_del_l &w_del_r &l_del_r &none   &none  &none  &none  &none  &none
-                         &none    &trans   &trans   &none   &none  &trans &trans &none
+                         &none    &trans   &trans   &trans  &trans &trans &trans &none
                          &none    &none    &none    &trans  &trans &none  &none  &none
            >;
         };
         
         right_nav_layer {
             bindings = <
-                &none &trans &trans &trans &none    &none     &trans   &trans   &trans &none
-                &none &none  &none  &none  &none    &none     &none    &none    &none  &kp BSPC
-                &none &none  &none  &none  &none    &kp PG_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &none &none  &none  &none  &none    &kp PG_DN &none    &none    &none  &none
-                      &none  &trans &trans &none    &none     &trans   &trans   &none
+                &none &trans &trans &trans &none    &none     &trans   &trans   &trans  &none
+                &none &none  &none  &none  &none    &none     &none    &none    &kp DEL &kp BSPC
+                &none &none  &none  &none  &none    &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+                &none &none  &none  &none  &none    &kp PG_DN &none    &none    &none   &none
+                      &none  &trans &trans &trans   &trans    &trans   &trans   &none
                       &none  &none  &none  &trans   &trans    &none    &none    &none
            >;
         };
 
         number_layer {
             bindings = <
-                &none  &trans &trans &trans  &none     &none  &trans  &trans &trans &none
-                &kp F1 &kp F2 &kp F3 &kp F4  &kp F5    &kp F6 &kp F7  &kp F8 &kp F9 &kp F10
-                &kp N1 &kp N2 &kp N3 &kp N4  &kp N5    &kp N6 &kp N7  &kp N8 &kp N9 &kp N0
-                &none  &none  &none  &kp F11 &none     &none  &kp F12 &none  &none  &none
-                       &none  &trans &trans  &none     &none  &trans  &trans &none
-                       &none  &none  &none   &trans    &trans &none   &none  &none
+                &none  &trans &trans &trans    &none     &none  &trans  &trans &trans &none
+                &kp F1 &kp F2 &kp F3 &kp F4    &kp F5    &kp F6 &kp F7  &kp F8 &kp F9 &kp F10
+                &kp N1 &kp N2 &kp N3 &kp N4    &kp N5    &kp N6 &kp N7  &kp N8 &kp N9 &kp N0
+                &none  &none  &none  &kp F11   &none     &none  &kp F12 &none  &none  &none
+                       &none  &trans &kp LSHFT &kp LALT  &trans &trans  &trans &none
+                       &none  &none  &none     &trans    &trans &none   &none  &none
            >;
         };
         //    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
