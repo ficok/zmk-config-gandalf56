@@ -54,7 +54,7 @@
                          &none    &trans   &trans   &none   &none  &trans &trans &none
                          &none    &none    &none    &trans  &trans &none  &none  &none
            >;
-        };f
+        };
         
         right_nav_layer {
             bindings = <
