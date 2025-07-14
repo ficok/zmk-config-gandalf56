@@ -16,14 +16,6 @@
 #define RNAV (3)
 #define NUM  (4)
 
-// Uncomment the following lines if using the "Direct Wire" jumper to switch the matrix to a direct wire.
-
-// / {
-//     chosen {
-//         zmk,physical-layout = &direct_physical_layout;
-//     };
-// };
-
 / {
     #include "shortcut_macros.dtsi"
     #include "nav_macros.dtsi"
@@ -44,25 +36,25 @@
 
         interp_layer {
             bindings = <
-                &none     &trans    &trans   &trans    &none       &none     &trans    &trans   &trans   &none
-                &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RBKT &kp RPAR &kp BSPC
-                &kp EQUAL &none     &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
-                &kp ESC   &none    &kp HASH  &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp BSLH &kp PIPE &kp SQT
+                &none     &trans   &trans   &trans    &none       &none     &trans    &trans   &trans   &none
+                &kp TAB   &kp LBKT &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
+                &kp EQUAL &none    &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
+                &kp ESC   &kp LT   &kp HASH  &kp EXCL &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
                           &none    &trans    &trans    &none       &none     &kp DEL    &kp LALT &none
-                          &none    &none     &none     &trans      &trans    &none     &none    &none
+                          &none    &none     &none     &trans      &trans    &none      &none    &none
            >;
         };
         
         left_nav_layer {
             bindings = <
-                &none &trans  &trans    &trans   &none     &none  &trans &trans &trans &none
-                &none &l_sel_l &w_sel_l &w_sel_r &l_sel_r  &none  &none  &none  &none  &none
-                &none &l_mov_l &w_mov_l &w_mov_r &l_mov_r  &none  &none  &none  &none  &none
-                &none &l_del_l &w_del_l &w_del_r &l_del_r  &none  &none  &none  &none  &none
-                      &none    &trans   &trans   &none     &none  &trans &trans &none
-                      &none    &none    &none    &trans    &trans &none  &none  &none
+                &none    &trans   &trans   &trans   &none   &none  &trans &trans &trans &none
+                &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none   &none  &none  &none  &none  &none
+                &l_mov_l &w_mov_l &w_mov_r &l_mov_r &none   &none  &none  &none  &none  &none
+                &l_del_l &w_del_l &w_del_r &l_del_r &none   &none  &none  &none  &none  &none
+                         &none    &trans   &trans   &none   &none  &trans &trans &none
+                         &none    &none    &none    &trans  &trans &none  &none  &none
            >;
-        };
+        };f
         
         right_nav_layer {
             bindings = <
