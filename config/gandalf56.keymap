@@ -28,7 +28,7 @@
         };
     };
     
-    &mt: {
+    &mt {
         flavor = "tap-preferred";
     }
     
