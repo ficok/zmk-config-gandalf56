@@ -19,7 +19,15 @@
 / {
     #include "shortcut_macros.dtsi"
     #include "nav_macros.dtsi"
-
+    
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        func_layer {
+            if-layers = <NAV ITP>;
+            then-layer = <NUM>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
