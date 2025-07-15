@@ -28,13 +28,15 @@
         };
     };
     
-    &mt {
-        flavor = "tap-preferred";
-    };
+
     
     keymap {
         compatible = "zmk,keymap";
-
+        
+        &mt {
+            flavor = "tap-preferred";
+        };
+        
         default_layer {
             bindings = <
                 &none       &none      &none      &none       &none       &none     &none       &none      &none      &none
