@@ -36,12 +36,12 @@
 
         interp_layer {
             bindings = <
-                &none     &trans   &trans   &trans    &none       &none     &trans    &trans   &trans   &none
-                &kp TAB   &kp LBKT &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
-                &kp EQUAL &none    &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
-                &kp ESC   &kp LT   &kp HASH  &kp EXCL &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
-                          &none    &trans    &kp DEL  &kp LALT    &trans    &trans    &trans   &none
-                          &none    &none     &none     &trans     &trans    &none      &none    &none
+                &none     &trans   &trans   &trans    &none        &none     &trans    &trans   &trans   &none
+                &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
+                &kp EQUAL &kp GRAVE &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
+                &kp ESC   &kp LT    &kp HASH &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
+                          &none     &trans   &kp DEL   &kp LALT    &trans    &trans    &trans   &none
+                          &none     &none    &none     &trans      &trans    &none     &none    &none
            >;
         };
         
