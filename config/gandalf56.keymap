@@ -37,7 +37,7 @@
             bindings = <&kp>, <&kp>;
             display-name = "Homerow-mod";
         };
-    }
+    };
     
     keymap {
         compatible = "zmk,keymap";
