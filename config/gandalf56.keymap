@@ -36,6 +36,9 @@
             tapping-term-ms = <250>;
             bindings = <&kp>, <&kp>;
             display-name = "Homerow-mod";
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
         };
     };
     
