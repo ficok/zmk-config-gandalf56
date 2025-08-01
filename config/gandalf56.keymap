@@ -22,7 +22,7 @@
     
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        num_layer {
+        func_layer {
             if-layers = <NAV ITP>;
             then-layer = <NUM>;
         };
@@ -51,9 +51,9 @@
             bindings = <
                 &none        &none       &none       &none        &none       &none     &none        &none       &none       &none
                 &kp Q        &kp W       &kp E       &kp R        &kp T       &kp Y     &kp U        &kp I       &kp O       &kp P
-                &hrm LCTRL A &hrm LCMD S &hrm LALT D &kp F        &kp G       &kp H     &kp J        &hrm RALT K &hrm RCMD L &hrm RCTRL SEMI
+                &hrm LCTRL A &hrm LCMD S &hrm LALT D &hrm LSHFT F &kp G       &kp H     &hrm RSHFT J &hrm RALT K &hrm RCMD L &hrm RCTRL SEMI
                 &kp Z        &kp X       &kp C       &kp V        &kp B       &kp N     &kp M        &kp COMMA   &kp DOT     &kp DQT
-                             &none       &kp LSHFT   &mo NAV      &kp ENTER   &kp SPACE &mo ITP      &kp BSPC    &none
+                             &kp ESC     &kp LCTRL   &mo NAV      &kp ENTER   &kp SPACE &mo ITP      &kp RSHFT   &mo MCR
                              &none       &none       &none        &none       &none     &none        &none       &none
            >;
         };
@@ -61,10 +61,10 @@
         interp_layer {
             bindings = <
                 &none     &none     &none    &none     &none       &none     &none     &none    &none    &none
-                &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &none
+                &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
                 &kp EQUAL &kp GRAVE &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
                 &kp COLON &kp LT    &kp HASH &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
-                          &none     &trans   &kp DEL   &kp ESC     &trans    &trans    &trans   &none
+                          &none     &none    &kp DEL   &kp ESC     &trans    &trans    &none   &none
                           &none     &none    &none     &none       &none     &none     &none   &none
            >;
         };
@@ -72,10 +72,10 @@
         nav_layer {
             bindings = <
                 &none    &none    &none    &none    &none      &none     &none    &none    &none   &none
-                &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none      &none     &none    &none    &none   &none
+                &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none      &none     &none    &none    &kp DEL &kp BSPC
                 &l_mov_l &w_mov_l &w_mov_r &l_mov_r &none      &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
                 &l_del_l &w_del_l &w_del_r &l_del_r &kp LSHFT  &kp PG_DN &none    &none    &none   &none
-                         &none    &none    &trans   &trans     &trans    &kp DEL  &kp BSPC &none
+                         &none    &none    &trans   &trans     &trans    &trans   &none    &none
                          &none    &none    &none    &none      &none     &none    &none    &none
            >;
         };
