@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define DFT (0)
 #define ITP (1)
 #define NAV (2)
-#define NUM (3)
-#define MCR (4)
+#define MCR (3)
 
 / {
     #include "shortcut_macros.dtsi"
@@ -49,22 +49,22 @@
         
         default_layer {
             bindings = <
-                &kp TAB      &kp ESC     &none       &none        &none       &none     &none        &kp ENTER   &kp DEL     &kp BSPC
+                &kp N1       &kp N2      &kp N3      &kp N4       &kp N5      &kp N6    &kp N7       &kp N8      &kp N9      &kp N0
                 &kp Q        &kp W       &kp E       &kp R        &kp T       &kp Y     &kp U        &kp I       &kp O       &kp P
-                &hrm LCTRL A &hrm LCMD S &hrm LALT D &hrm LSHFT F &kp G       &kp H     &hrm RSHFT J &hrm RALT K &hrm RCMD L &hrm RCTRL SEMI
+                &kp A        &kp S       &kp D       &kp F        &kp G       &kp H     &kp J        &kp K       &kp L       &kp SEMI
                 &kp Z        &kp X       &kp C       &kp V        &kp B       &kp N     &kp M        &kp COMMA   &kp DOT     &kp DQT
-                             &kp ESC     &kp LCTRL   &mo NAV      &kp ENTER   &kp SPACE &mo ITP      &kp RSHFT   &mo MCR
+                             &kp LALT    &kp LSHFT   &mo NAV      &kp ENTER   &kp SPACE &mo ITP      &kp RCTRL   &mo MCR
                              &none       &none       &none        &none       &none     &none        &none       &none
            >;
         };
 
         interp_layer {
             bindings = <
-                &trans    &trans    &none    &none     &none       &none     &none     &trans   &trans   &trans
+                &kp F1    &kp F2    &kp F11  &kp F4    &kp F5      &kp F6    &kp F12   &kp F8   &kp F9   &kp F10
                 &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC
                 &kp EQUAL &kp GRAVE &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH
                 &kp COLON &kp LT    &kp HASH &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT
-                          &none     &none    &kp DEL   &kp ESC     &trans    &trans    &none   &none
+                          &kp ESC   &trans   &kp DEL   &kp ESC     &trans    &trans    &trans   &trans
                           &none     &none    &none     &none       &none     &none     &none   &none
            >;
         };
@@ -75,22 +75,11 @@
                 &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none      &none     &none    &none    &kp DEL &kp BSPC
                 &l_mov_l &w_mov_l &w_mov_r &l_mov_r &none      &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
                 &l_del_l &w_del_l &w_del_r &l_del_r &kp LSHFT  &kp PG_DN &none    &none    &none   &none
-                         &none    &none    &trans   &trans     &trans    &trans   &none    &none
+                         &trans   &trans   &trans   &trans     &trans    &trans   &trans   &trans
                          &none    &none    &none    &none      &none     &none    &none    &none
            >;
         };
 
-        number_layer {
-            bindings = <
-                &trans &trans &none  &none     &none     &none  &none   &trans    &trans  &trans
-                &kp F1 &kp F2 &kp F3 &kp F4    &kp F5    &kp F6 &kp F7  &kp F8    &kp F9  &kp F10
-                &kp N1 &kp N2 &kp N3 &kp N4    &kp N5    &kp N6 &kp N7  &kp N8    &kp N9  &kp N0
-                &none  &none  &none  &kp F11   &none     &none  &kp F12 &kp COMMA &kp DOT &none
-                       &none  &none  &trans    &trans    &trans &trans  &none  &none
-                       &none  &none  &none     &none     &none  &none   &none  &none
-           >;
-        };
-        
         macro_layer {
             bindings = <
                 &trans &trans &none  &none     &none     &none  &none   &trans &trans &trans
