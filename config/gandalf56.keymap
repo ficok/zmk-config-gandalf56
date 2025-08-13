@@ -20,14 +20,6 @@
     #include "shortcut_macros.dtsi"
     #include "nav_macros.dtsi"
     
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        func_layer {
-            if-layers = <NAV ITP>;
-            then-layer = <NUM>;
-        };
-    };
-    
     behaviors {
         hrm: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
